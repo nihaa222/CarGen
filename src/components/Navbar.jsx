@@ -127,7 +127,7 @@ import {
   DropdownItem,
 } from "@nextui-org/react";
 import { useMemo, useState } from "react";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
 
 const NavbarOne = () => {
   // const handleClick = () => {
@@ -226,7 +226,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue1 == "None" ? "Type of Vehicle" : selectedValue1}
 
-                {/* <RiArrowDropDownLine /> */}
+                <IoIosArrowDown />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -263,7 +263,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue2 == "None" ? "Brand" : selectedValue2}
 
-                <RiArrowDropDownLine />
+                <IoIosArrowDown />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -287,7 +287,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue3 == "None" ? "Kms travelled" : selectedValue3}
 
-                {/* <RiArrowDropDownLine /> */}
+                <IoIosArrowDown />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -310,8 +310,7 @@ const NavbarOne = () => {
             <DropdownTrigger>
               <Button variant="light">
                 {selectedValue4 == "None" ? "Fuel type" : selectedValue4}
-
-                {/* <RiArrowDropDownLine /> */}
+                <IoIosArrowDown />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -335,7 +334,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue4 == "None" ? "Transmission" : selectedValue5}
 
-                {/* <RiArrowDropDownLine /> */}
+                <IoIosArrowDown />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
