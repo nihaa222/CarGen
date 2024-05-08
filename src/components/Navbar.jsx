@@ -118,7 +118,8 @@ import { Avatar, Button } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 import { useLocation } from "react-router-dom";
 import { Input } from "@nextui-org/input";
-import { FaSearch } from "react-icons/fa";
+
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import {
   Dropdown,
@@ -127,7 +128,8 @@ import {
   DropdownItem,
 } from "@nextui-org/react";
 import { useMemo, useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+
+import { Search } from "@mui/icons-material";
 
 const NavbarOne = () => {
   // const handleClick = () => {
@@ -196,7 +198,7 @@ const NavbarOne = () => {
 
         <div className=" flex gap-1 md:gap-8 items-center">
           <Button isIconOnly className="inline md:hidden ">
-            <FaSearch className="ml-3" />
+            <Search />
           </Button>
 
           <Input className="hidden md:inline" placeholder="Search vehicle" />
@@ -226,7 +228,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue1 == "None" ? "Type of Vehicle" : selectedValue1}
 
-                <IoIosArrowDown />
+                <KeyboardArrowDownIcon />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -263,7 +265,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue2 == "None" ? "Brand" : selectedValue2}
 
-                <IoIosArrowDown />
+                <KeyboardArrowDownIcon />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -287,7 +289,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue3 == "None" ? "Kms travelled" : selectedValue3}
 
-                <IoIosArrowDown />
+                <KeyboardArrowDownIcon />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -310,7 +312,7 @@ const NavbarOne = () => {
             <DropdownTrigger>
               <Button variant="light">
                 {selectedValue4 == "None" ? "Fuel type" : selectedValue4}
-                <IoIosArrowDown />
+                <KeyboardArrowDownIcon />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
@@ -334,7 +336,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue4 == "None" ? "Transmission" : selectedValue5}
 
-                <IoIosArrowDown />
+                <KeyboardArrowDownIcon />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
