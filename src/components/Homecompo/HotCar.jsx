@@ -50,24 +50,24 @@ const text = [
   },
 ];
 
-const arr = Array.from({ length: 5 }, () => ({ ...Card }));
+const arr = Array.from({ length: 4 }, () => ({ ...Card }));
 
 const HotCar = () => {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div>
-      <p className="font-semibold mx-10 md:mx-16 mt-16 mb-10">
+    <div className="mb-20">
+      <p className="font-semibold mx-10 md:mx-16 mt-16 mb-10 text-[20px] ">
         Hot auctions in Noida
       </p>
-      <div className="flex  max-w-[1440x] flex-wrap gap-y-10  mx-auto">
+      <div className="flex  max-w-[1200x] flex-wrap  justify-between mx-20  ">
         {arr.map((item, index) => (
           <div
-            className="relative h-[400px] w-[300px] flex mx-10 flex-col justify-center border-2 rounded-xl "
+            className="relative h-[400px] w-[300px] flex  flex-col justify-center border-2 rounded-xl "
             key={index}
           >
             <img className="mt-10" src={item.car} alt="Car" />
-            <p className="absolute right-2 top-3 bg-gray-500   text-white h-8 w-36 pt-1 pl-2 rounded-xl ">
+            <p className="absolute right-2 top-3 bg-gray-500    text-white h-8 w-36 pt-1 pl-2 rounded-xl ">
               {item.text}
             </p>
             <div className="flex justify-between mt-5">
@@ -111,15 +111,15 @@ const HotCar = () => {
         ))}
       </div>
       <div>
-        <p className="font-semibold mx-10 md:mx-32 mt-32 mb-10">
+        <p className="font-semibold mx-w-[1400px] mx-10 md:mx-52 mt-32 mb-10 mb-20">
           Why people choose us?
         </p>
       </div>
-      <div className="flex max-w-[1600px] flex-wrap gap-y-10 gap-20 mx-auto">
+      <div className="flex max-w-[1400]  justify-center gap-10 sm:gap-20  mx-20   gap-y-10">
         {text.map((item) => (
           <div
             key={item.img}
-            className="px-3 h-[400px] w-[300px] flex flex-col gap-3 py-4"
+            className="px-3 shadow-xl h-[400px] w-[300px] flex flex-col gap-3 py-4"
           >
             <img src={item.photo} alt="Photo" />
             <p>{item.textmain}</p>

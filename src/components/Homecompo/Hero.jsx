@@ -44,7 +44,7 @@ const Hero = () => {
         placeholder="Search Vehicle"
       ></Input>
       <Button
-        className="absolute font-bold hidden sm:inline sm:top-48 lg:left-[720px] md:left-[550px] left-[300px] top-60 md:top-[500px]"
+        className="absolute shadow-2xl font-bold hidden sm:inline sm:top-48 lg:left-[720px] md:left-[550px] left-[300px] top-60 md:top-[500px]"
         color="primary"
         size="sm"
       >
@@ -55,11 +55,16 @@ const Hero = () => {
       </p>
       <div className="flex gap-3 left-2 absolute top-[280px] md:top-[590px] flex-wrap">
         {img.map((item) => (
-          <img
-            className="md:h-20 h-10 w-10 md:w-28"
+          <div
+            className="hover:scale-110 transform transition-transform duration-300  h-full"
             key={item.key}
-            src={item.img}
-          />
+          >
+            <img
+              className="md:h-20 h-10 w-10 md:w-28"
+              key={item.key}
+              src={item.img}
+            />
+          </div>
         ))}
       </div>
     </div>
