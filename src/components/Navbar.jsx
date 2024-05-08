@@ -118,7 +118,7 @@ import { Avatar, Button } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 import { useLocation } from "react-router-dom";
 import { Input } from "@nextui-org/input";
-// import { FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 
 import {
   Dropdown,
@@ -127,7 +127,7 @@ import {
   DropdownItem,
 } from "@nextui-org/react";
 import { useMemo, useState } from "react";
-// import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const NavbarOne = () => {
   // const handleClick = () => {
@@ -195,9 +195,9 @@ const NavbarOne = () => {
         </div>
 
         <div className=" flex gap-1 md:gap-8 items-center">
-          {/* <Button isIconOnly className="inline md:hidden ">
+          <Button isIconOnly className="inline md:hidden ">
             <FaSearch className="ml-3" />
-          </Button> */}
+          </Button>
 
           <Input className="hidden md:inline" placeholder="Search vehicle" />
           <div>
@@ -263,7 +263,7 @@ const NavbarOne = () => {
               <Button variant="light">
                 {selectedValue2 == "None" ? "Brand" : selectedValue2}
 
-                {/* <RiArrowDropDownLine /> */}
+                <RiArrowDropDownLine />
               </Button>
             </DropdownTrigger>
             <DropdownMenu
