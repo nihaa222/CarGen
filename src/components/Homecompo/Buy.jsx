@@ -3,13 +3,13 @@ import React from "react";
 const Buy = () => {
   return (
     <div>
-      <div className="font-bold text-[20px] whitespace-nowrap mx-10 mt-16">
+      <div className="font-bold text-[20px] whitespace-nowrap mx-44 mt-16">
         <p>How to Buy</p>
       </div>
       <div className="max-w-[1400px] mx-[10px] mt-8">
         <div className="flex flex-col gap-10">
-          <div className="grid grid-cols-1 md:grid-cols-web gap-10 mx-10 items-center">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-web gap-10 mx-10  items-center">
+            <div className="justify-self-center">
               <img
                 className="md:h-44 md:w-44 h-full w-full"
                 src="/Screenshot 2024-05-05 at 5.23 1.png"
@@ -25,7 +25,7 @@ const Buy = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-web gap-10 mx-10 items-center">
-            <div className="justify-self-start">
+            <div className="justify-self-center">
               <img
                 className="md:h-44 md:w-44 h-full w-full"
                 src="/Screenshot 2024-05-05 at 5.23 1 (1).png"
@@ -41,7 +41,7 @@ const Buy = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-web gap-10 items-center">
-            <div className="justify-self-start mx-10">
+            <div className="justify-self-center  ml-10">
               <img
                 className="md:h-48 md:w-48 h-full w-full object-fit "
                 src="/image3.png"

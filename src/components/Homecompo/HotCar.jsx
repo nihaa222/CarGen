@@ -57,13 +57,13 @@ const HotCar = () => {
 
   return (
     <div className="mb-20">
-      <p className="font-semibold mx-10 md:mx-16 mt-16 mb-10 text-[20px] ">
+      <p className="font-bold mx-10 md:mx-52 mt-16 mb-10 text-[20px] ">
         Hot auctions in Noida
       </p>
-      <div className="flex  max-w-[1200x] flex-wrap  justify-between mx-20  ">
+      <div className="flex  max-w-[1200x] gap-10   justify-center mx-20   ">
         {arr.map((item, index) => (
           <div
-            className="relative h-[400px] w-[300px] flex  flex-col justify-center border-2 rounded-xl "
+            className="relative h-[400px] flex   flex-col justify-center border-2 rounded-xl "
             key={index}
           >
             <img className="mt-10" src={item.car} alt="Car" />
@@ -111,7 +111,7 @@ const HotCar = () => {
         ))}
       </div>
       <div>
-        <p className="font-semibold mx-w-[1400px] mx-10 md:mx-52 mt-32 mb-10 mb-20">
+        <p className="font-bold text-[20px] mx-w-[1400px] mx-10 md:mx-52 mt-32 mb-10 mb-20">
           Why people choose us?
         </p>
       </div>
