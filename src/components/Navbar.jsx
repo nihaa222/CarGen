@@ -130,6 +130,7 @@ import {
 import { useMemo, useState } from "react";
 
 import { Search } from "@mui/icons-material";
+import Hero from "./Hero";
 
 const NavbarOne = () => {
   // const handleClick = () => {
@@ -357,6 +358,7 @@ const NavbarOne = () => {
           </Dropdown>
         </div>
       </div>
+      <Hero />
     </>
   );
 };
