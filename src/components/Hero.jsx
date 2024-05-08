@@ -56,7 +56,7 @@ const Hero = () => {
       <div className="flex gap-3 left-2 absolute top-[280px] md:top-[590px] flex-wrap">
         {img.map((item) => (
           <img
-            className="md:h-full h-10 w-10 md:w-full"
+            className="md:h-20 h-10 w-10 md:w-28"
             key={item.key}
             src={item.img}
           />
