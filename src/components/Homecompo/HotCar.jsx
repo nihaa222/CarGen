@@ -60,10 +60,10 @@ const HotCar = () => {
       <p className="font-bold mx-10 md:mx-52 mt-16 mb-10 text-[20px] ">
         Hot auctions in Noida
       </p>
-      <div className="flex  max-w-[1200x] gap-10   justify-center mx-20   ">
+      <div className="flex  max-w-[1200x] gap-10   justify-center mx-10   ">
         {arr.map((item, index) => (
           <div
-            className="relative h-[400px] flex   flex-col justify-center border-2 rounded-xl "
+            className="relative h-[450px] flex   flex-col justify-center border-2 rounded-xl "
             key={index}
           >
             <img className="mt-10" src={item.car} alt="Car" />
@@ -94,7 +94,7 @@ const HotCar = () => {
               </div>
             </div>
 
-            <div className="mt-5 flex gap-12 ">
+            <div className="mt-5 flex gap-12 justify-center ">
               <Button
                 color="primary"
                 variant="bordered"
