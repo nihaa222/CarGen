@@ -44,7 +44,7 @@ const Hero = () => {
         placeholder="Search Vehicle"
       ></Input>
       <Button
-        className="absolute hidden sm:inline sm:top-48 lg:left-[750px] md:left-[550px] left-[300px] top-60 md:top-[500px]"
+        className="absolute font-bold hidden sm:inline sm:top-48 lg:left-[720px] md:left-[550px] left-[300px] top-60 md:top-[500px]"
         color="primary"
         size="sm"
       >

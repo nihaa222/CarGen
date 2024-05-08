@@ -1,21 +1,38 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardBody, Button, Image, useSelect, Divider, DateRangePicker } from "@nextui-org/react";
-import { useDispatch, useSelector } from 'react-redux';
-import { checkIfVehicleLiked, toggleVehicleLike } from '../Redux/vehicleSlice';
+import PropTypes from "prop-types";
+import {
+  Card,
+  CardBody,
+  Button,
+  Image,
+  useSelect,
+  Divider,
+  DateRangePicker,
+} from "@nextui-org/react";
+import { useDispatch, useSelector } from "react-redux";
+import { checkIfVehicleLiked, toggleVehicleLike } from "../Redux/vehicleSlice";
 import { useNavigate } from "react-router-dom";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from "@nextui-org/react";
 
 const VehicleCard = ({ vehicle }) => {
-  const { id, make, model, imageUrl, brand, fuelType, transmission, distanceTraveled } = vehicle;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isLiked, setIsLiked] = useState(false);
-  const userId = useSelector((state) => state.auth.data.uid)
+  const userId = useSelector((state) => state.auth.data.uid);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     const fetchData = async () => {
-      const isLiked = await dispatch(checkIfVehicleLiked({ vehicleId: id, userId }));
+      const isLiked = await dispatch(
+        checkIfVehicleLiked({ vehicleId: id, userId })
+      );
       setIsLiked(isLiked.payload);
     };
     fetchData();
@@ -39,14 +56,24 @@ const VehicleCard = ({ vehicle }) => {
   };
 
   return (
-    <Card shadow="dark-lg" className="w-[300px] flex flex-col rounded-xl overflow-hidden">
+    <Card
+      shadow="dark-lg"
+      className="w-[300px] flex flex-col rounded-xl overflow-hidden"
+    >
       <div className="relative h-48 overflow-hidden">
-        <Image alt={`${make} ${model}`} src={imageUrl} className="object-cover w-full h-full" />
+        <Image
+          alt={`${make} ${model}`}
+          src={imageUrl}
+          className="object-cover w-full h-full"
+        />
       </div>
       {<Button onClick={handleLike}>{isLiked ? "Unlike" : "Like"}</Button>}
 
-      <CardBody className="flex flex-col p-4">z
-        <h3 className="font-bold text-xl mb-4">{make} {model}</h3>
+      <CardBody className="flex flex-col p-4">
+        z
+        <h3 className="font-bold text-xl mb-4">
+          {make} {model}
+        </h3>
         <div className="flex mb-2">
           <div className="mr-4">
             <p className="font-semibold">{brand}</p>
@@ -62,29 +89,49 @@ const VehicleCard = ({ vehicle }) => {
           </div>
         </div>
         <div className="flex justify-between">
-          <Button variant="text" color="primary" onClick={handleAddToAuctionClick}>Add to Auction</Button>
-          <Button variant="text" color="error" onClick={handleViewDetailClick}>View Detail</Button>
+          <Button
+            variant="text"
+            color="primary"
+            onClick={handleAddToAuctionClick}
+          >
+            Add to Auction
+          </Button>
+          <Button variant="text" color="error" onClick={handleViewDetailClick}>
+            View Detail
+          </Button>
         </div>
       </CardBody>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalContent>
           <ModalHeader>Book Test Drive</ModalHeader>
           <Divider />
-          <DateRangePicker
-            label="Stay duration"
-            className="max-w-xs"
-          />
-          <ModalBody>
-            {/* Add content for the auction modal here */}
-          </ModalBody>
+          <DateRangePicker label="Stay duration" className="max-w-xs" />
+          <ModalBody>{/* Add content for the auction modal here */}</ModalBody>
           <ModalFooter>
-            <Button color="error" variant="light" onClick={onClose}>Cancel</Button>
-            <Button color="primary" onClick={onClose}>Add to Auction</Button>
+            <Button color="error" variant="light" onClick={onClose}>
+              Cancel
+            </Button>
+            <Button color="primary" onClick={onClose}>
+              Add to Auction
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
     </Card>
   );
+};
+
+VehicleCard.propTypes = {
+  vehicle: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    make: PropTypes.string.isRequired,
+    model: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    brand: PropTypes.string.isRequired,
+    fuelType: PropTypes.string.isRequired,
+    transmission: PropTypes.string.isRequired,
+    distanceTraveled: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default VehicleCard;
